@@ -1,3 +1,7 @@
+import sys
+import os
+import kyber
+import polib
 R = PolynomialRing(11, 8)
 x = R.gen()
 f = 3*x**3 + 4*x**7
