@@ -1,6 +1,5 @@
 import os
 import sys
-sys.path.append('C:/Users/thedr/AppData/Roaming/Python/Python312/site-packages/kyber')
 from kyber_py.ml_kem.ml_kem import ML_KEM
 
 def main():

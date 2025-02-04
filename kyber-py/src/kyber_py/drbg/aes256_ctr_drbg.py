@@ -2,6 +2,8 @@ import os
 from ..utilities.utils import xor_bytes
 from Crypto.Cipher import AES
 from typing import Optional
+import unittest
+from kyber import Kyber
 
 
 class AES256_CTR_DRBG:
