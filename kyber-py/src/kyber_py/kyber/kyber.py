@@ -22,7 +22,7 @@ class Kyber:
 
         # Use system randomness by default, for deterministic randomness
         # use the method `set_drbg_seed()`
-        self.random_bytes = os.urandom
+        self.random_bytes = 0
 
     def set_drbg_seed(self, seed):
         """
@@ -364,3 +364,4 @@ class Kyber:
         # vital that the selection between the key and garbage is
         # performed in constant time
         return select_bytes(garbage, key, c == c_prime)
+    
