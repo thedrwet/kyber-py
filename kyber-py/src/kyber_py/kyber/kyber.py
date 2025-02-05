@@ -22,7 +22,7 @@ class Kyber:
 
         # Use system randomness by default, for deterministic randomness
         # use the method `set_drbg_seed()`
-        self.random_bytes = 0
+        self.random_bytes = 1
 
     def set_drbg_seed(self, seed):
         """
