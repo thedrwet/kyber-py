@@ -299,7 +299,7 @@ class Kyber:
         :rtype: tuple(bytes, bytes)
         """
         # Compute random message
-        m = self.random_bytes(32)
+        m = input("Enter a message: ").encode()
 
         # The hash of shame
         m_hash = self._h(m)
@@ -350,6 +350,7 @@ class Kyber:
 
         # Decrypt the ciphertext
         m = self._cpapke_dec(sk_pke, c)
+        print(m)
 
         # Decapsulation
         K_bar, r = self._g(m + pk_hash)
