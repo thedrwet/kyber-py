@@ -1,6 +1,6 @@
 import hashlib
 from hashlib import sha256
-from kyber import Kyber512, Kyber768, Kyber1024
+from kyber import Kyber512, Kyber768, Kyber1024 #, Kyber512, Kyber768, Kyber1024
 
 def test_kyber512(name):
     pk, sk = Kyber512.keygen()

@@ -5,13 +5,11 @@ from ..utilities.utils import select_bytes
 
 
 # Global variables
-k = 2
-eta_1 = 3
-eta_2 = 2
-du = 10
-dv = 4
-n =256
-q = 3329
+k = None
+eta_1 = None
+eta_2 = None
+du = None
+dv = None
 random_bytes = os.urandom
 
 def set_drbg_seed(seed):
