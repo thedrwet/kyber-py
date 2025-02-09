@@ -365,7 +365,5 @@ class Kyber:
         # vital that the selection between the key and garbage is
         # performed in constant time
         return select_bytes(garbage, key, c == c_prime)
-pk, sk =Kyber.Kyber512.keygen()
-c, key =Kyber.Kyber512.enc(pk)
-_key =Kyber.Kyber512.dec(c, sk)
+
     

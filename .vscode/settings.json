@@ -1,5 +1,6 @@
 {
     "python.analysis.extraPaths": [
-        "./kyber-py/src"
+        "./kyber-py/src",
+        "./kyber-py/src/kyber_py"
     ]
 }

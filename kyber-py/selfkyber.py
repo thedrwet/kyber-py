@@ -330,3 +330,4 @@ def decaps(sk, c, key_length=32):
     # vital that the selection between the key and garbage is
     # performed in constant time
     return select_bytes(garbage, key, c == c_prime)
+

@@ -7,7 +7,7 @@ public_key, secret_key = kyber.Kyber512._cpapke_keygen()
 #print("Secret key:\n\n", secret_key.hex())
 
 
-d = 144178574752858033
+d = kyber.Kyber512._keypair()
 rho, sigma = kyber.Kyber512._g(d)
 print("rho:", rho.hex())
 print("sigma:", sigma.hex())
