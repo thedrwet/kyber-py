@@ -6,6 +6,7 @@ def test_kyber512(name):
     pk, sk = Kyber512.keygen()
     c, key = Kyber512.enc(pk)
     _key = Kyber512.dec(c, sk)
+    
     #assert key == _key
     #print(f"{name} test passed!\n \n \n")
     #print(f"Public Key: {pk.hex()}\n \n")
