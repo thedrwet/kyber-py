@@ -280,6 +280,17 @@ class ML_KEM:
         ``dk`` is encoded as bytes of length 768*k + 96
 
         Part of stable API.
+        """
+        logging.info("Calling keygen method")
+
+        """
+        Generate an encapsulation key and corresponding decapsulation key
+        following Algorithm 19 (FIPS 203)
+
+        ``ek`` is encoded as bytes of length 384*k + 32
+        ``dk`` is encoded as bytes of length 768*k + 96
+
+        Part of stable API.
 
         :return: Tuple with encapsulation key and decapsulation key.
         :rtype: tuple(bytes, bytes)
@@ -339,6 +350,20 @@ class ML_KEM:
         return K, c
 
     def encaps(self, ek):
+        """
+        Uses the encapsulation key to generate a shared secret key and an
+        associated ciphertext following Algorithm 20 (FIPS 203)
+
+        ``K`` is the shared secret key of length 32 bytes
+        ``c`` is the ciphertext of length 32(du*k + dv)
+
+        Part of stable API.
+        :param bytes ek: byte-encoded encapsulation key
+        :return: a random key (``K``) and an encapsulation of it (``c``)
+        :rtype: tuple(bytes, bytes)
+        """
+        logging.info("Calling encaps method with ek: %s", ek.hex())
+
         """
         Uses the encapsulation key to generate a shared secret key and an
         associated ciphertext following Algorithm 20 (FIPS 203)
@@ -413,6 +438,20 @@ class ML_KEM:
         return select_bytes(K_bar, K_prime, c == c_prime)
 
     def decaps(self, dk, c):
+        """
+        Uses the decapsulation key to produce a shared secret key from a
+        ciphertext following Algorithm 21 (FIPS 203).
+
+        ``K`` is the shared secret key of length 32 bytes
+
+        Part of stable API.
+        :param bytes dk: decapsulation key
+        :param bytes c: ciphertext with an encapsulated key
+        :return: shared secret key (``K``)
+        :rtype: bytes
+        """
+        logging.info("Calling decaps method with dk: %s and c: %s", dk.hex(), c.hex())
+
         """
         Uses the decapsulation key to produce a shared secret key from a
         ciphertext following Algorithm 21 (FIPS 203).

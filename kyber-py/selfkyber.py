@@ -1,7 +1,8 @@
 import os
 from hashlib import sha3_256, sha3_512, shake_128, shake_256
-from ..modules.modules import ModuleKyber
-from ..utilities.utils import select_bytes
+from modules.modules import ModuleKyber
+from utilities.utils import select_bytes
+
 
 
 # Global variables
@@ -330,4 +331,3 @@ def decaps(sk, c, key_length=32):
     # vital that the selection between the key and garbage is
     # performed in constant time
     return select_bytes(garbage, key, c == c_prime)
-
